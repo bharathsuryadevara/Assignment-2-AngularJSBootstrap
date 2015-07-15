@@ -1,0 +1,107 @@
+<html>
+<title>Survey</title>
+<head>
+<style>
+body{
+    background:#ececec !important;
+    font-family:helvetica;
+}
+.right{
+    float:right;
+}
+.main{
+    margin:20px auto;
+    width:400px;
+    border:1px solid #3399cc;
+    border-radius:5px;
+}
+.head-txt{
+    font-weight:bold;
+    text-align:center;
+    font-size:22px;
+    margin-bottom:10px;
+}
+.martop{
+    margin-top:15px;
+}
+.padtop{
+    padding-top:15px;
+    display:block;
+}
+.sign-btn{
+    background:#3399cc;
+    color:#fff;
+    font-weight:bold;
+    padding:3px;
+    border:0px;
+    border-radius:5px;
+    cursor: pointer;
+}
+.inner-container{
+    width:330px;
+    margin-left:10px;
+}
+input {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    padding: 4px;
+}
+.green{
+    color:#339900;
+}
+strong {
+float:left;
+display:block;
+width:100px;
+}
+.angLeft{
+padding-left:100px;
+display:block;
+}
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+legend{
+width:75px !important;
+text-decoration:none;
+}
+</style>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script>
+function myFunction() {
+    document.getElementById("studentDetails").reset();
+}
+</script>
+</head>
+<body>
+    <form id="studentDetails">
+	<fieldset class="main">
+		<legend class="head-txt">Survey</legend>
+		    <div class="inner-container" ng-app="">
+		        <div class="martop">
+				<strong><em>Full Name</em></strong><input type="text" ng-model="name" name="fullname" placeholder="full name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'full name'"></br>
+				<span class="angLeft">{{name}}</span>
+			</div>
+		        <div class="martop">
+				<strong><em>Address</em></strong><input type="text"  ng-model="address" name="address" placeholder="address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'address'"></br>
+				<span class="angLeft">{{address}}</span>
+			</div>
+		        <div class="martop">
+				<strong><em>Email</em></strong><input type="text"  ng-model="email" name="email" value="" placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'"></br>
+				<span class="angLeft">{{email}}</span>
+			</div>
+		        <div class="martop">
+				<strong><em>Phone</em></strong><input type="text"  ng-model="phone" name="phone" value="" placeholder="phone number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'phone number'"></br>
+				<span class="angLeft">{{phone}}</span>
+			</div>
+		        <div class="martop" style="margin-left:90px;margin-bottom:10px;"> <button style="margin-right:5px;" class="btn btn-success" name="login" >Log in</button><button class="btn btn-success" name="signup" >Sign Up</button> <button class="btn btn-success" name="reset" >Reset</button></div>
+		    </div>
+
+	</fieldset>
+</form>
+</body>
+</html>
